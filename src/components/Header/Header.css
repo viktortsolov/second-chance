@@ -1,89 +1,45 @@
-.Header {
-    background-color: #D8BFAA;
+.nav {
+    position: relative;
+    padding: 1em;
 }
 
-.header-wrapper {
+.nav__list {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+nav {
+    text-align: center;
+    width: 100%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.logoArt-href{
-    padding: 5px;
-    background-color: #fff;
-    border-radius: 10px;
-}
-
-.logoArt-href img{
-    width: 150px;
-}
-
-.header-nav {
-    margin: auto 0;
-}
-
-.header-nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    text-align: center;
-}
-
-.header-nav-links li {
-    padding: 20px;
-    transition: 0.5s;
-}
-
-.header-nav-links a {
-    padding: 5px;
-    margin: auto;
-
-    font-size: 20px;
-    font-weight: bold;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-
+    background: #A89B8C;
     display: block;
-    position: relative;
-    transition: 0.5s;
 }
 
-.header-nav-links a li:hover {
-    background-color: #baa390;
-}
-
-.header-User-nav {
-    margin: auto 0;
-}
-
-.header-User-nav-links{
+ul {
     list-style: none;
-    display: flex;
+    padding: 0;
     margin: 0;
-    text-align: center;
 }
 
-.header-User-nav-links li{
-    padding: 5px 20px;
-    margin: 0 10px;
-    background-color: #fff;
-    border-radius: 5px;
+li a:hover {
     transition: 0.5s;
+    border-radius: 0.5em;
+    background-color: #fdfdfd;
+    color: #A89B8C;
 }
 
-.header-User-nav-links a {
-    padding: 5px;
-
-    font-size: 20px;
-    font-weight: bold;
-    font-family: sans-serif;
-    text-transform: uppercase;
+a {
     text-decoration: none;
-    color: #baa390;
+    font-weight: 600;
+    text-transform: uppercase;
+    user-select: none;
+    padding: 0.5em 2em;
+}
 
-    display: block;
-    position: relative;
-    transition: 0.5s;
+a,
+a:visited {
+    color: #fdfdfd;
 }
