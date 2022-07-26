@@ -4,6 +4,7 @@ function Header() {
     return (
         <header className="Header">
             <div className="header-wrapper">
+                <img className="logo" src='site-logo.png' alt="site logo"/>
                 <nav className="nav">
                     <ul className="nav__list">
                         <li>
