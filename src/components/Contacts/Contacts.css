@@ -1,0 +1,58 @@
+.Main-Contacts {
+    padding-bottom: 50px;
+    background: white;
+}
+
+.contacts {
+    margin: 0 auto;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__mapframe {
+    width: 100%;
+    height: 500px;
+    border: 2px solid #A89B8C;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.contacts__info .info__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts__info .info__title {
+    margin: 30px 0px;
+}
+
+.contacts__info .info__items .item {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.contacts__locationAndTime {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.contacts__locationAndTime .location {
+    width: 50%;
+}
+
+.contacts__locationAndTime .workingTime {
+    width: 50%;
+}
+
+.contacts__locationAndTime .workingTime .workingTime__title,
+.contacts__locationAndTime .location .location__title {
+    margin-bottom: 20px;
+}
+
+.workingTime .workingTime__weekly,
+.workingTime .workingTime__weekend {
+    display: flex;
+    margin-bottom: 5px
+}
