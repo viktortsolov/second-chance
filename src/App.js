@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
+
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer'
 import './App.css';
@@ -10,10 +12,15 @@ function App() {
     <div className="App">
       <Header className="App-header" />
 
-      {/* <LandingPage />
-      <Catalogue /> */}
-
-      <Contacts />
+      <BrowserRouter>
+        <Routes>
+          <Route index path="/" element={<LandingPage />} />
+          <Route path="/Catalogue" element={<Catalogue />} />
+          <Route path="/Contacts" element={<Contacts />} />
+          <Route render={() => Error} />
+          {/*         <Route render={() => ErrorPage()}/> */}
+        </Routes>
+      </BrowserRouter>
 
       <Footer className="App-footer" />
     </div>
