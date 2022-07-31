@@ -1,3 +1,50 @@
-.FilterMenu{
+.FilterMenu {
+    text-align: center;
+    font-size: 14px;
     width: 20%;
+    border: 2px solid #A89B8C;
+    padding: 20px;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+
+.FilterMenu-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.FilterMenu-form label {
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+}
+
+.FilterMenu-form input[type=text] {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 5px;
+  }
+
+.FilterMenu-form-submitBtn {
+    margin-top: 10px;
+    border: 2px solid #A89B8C;
+    background: #A89B8C;
+    border-radius: 25px;
+    width: fit-content;
+    padding: 5px 20px;
+    color: white;
+    font-weight: bold;
+    align-self: center;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.FilterMenu-form-submitBtn:hover {
+    cursor: pointer;
+    color: #A89B8C;
+    background-color: transparent;
 }

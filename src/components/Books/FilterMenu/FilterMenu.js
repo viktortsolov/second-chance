@@ -17,6 +17,15 @@ function FilterMenu() {
 
                 <label htmlFor='pages'>Length (pages)</label>
                 <input type='text' className='pages' id='pages' />
+
+                <label htmlFor='quality'>Quality</label>
+                <select name='quality' id='quality' default='QUALITY'>
+                    <option value='QUALITY'>QUALITY</option>
+                    <option value='QUALITY'>QUALITY</option>
+                    <option value='QUALITY'>QUALITY</option>
+                </select>
+
+                <input type='submit' className='FilterMenu-form-submitBtn' value='Filter' />
             </form>
         </aside>
     )
