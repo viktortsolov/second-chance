@@ -1,41 +1,45 @@
+import { Link } from 'react-router-dom';
+
 import './Header.css';
 
 function Header() {
     return (
         <header className="Header">
             <div className="header-wrapper">
-                <img className="logo" src='site-logo.png' alt="site logo"/>
+                <Link to='/'>
+                    <img className="logo" src='site-logo.png' alt="site logo" />
+                </Link>
                 <nav className="nav">
                     <ul className="nav__list">
                         <li>
-                            <a href="">
+                            <Link to='/catalogue'>
                                 Books <i className="fa-solid fa-book"></i>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="">
+                            <Link to='/mybooks'>
                                 My Books <i className="fa-solid fa-address-book"></i>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="">
+                            <Link to='/ask'>
                                 Ask Us <i className="fa-solid fa-circle-question"></i>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="">
+                            <Link to='/contacts'>
                                 Contact Us <i className="fa-solid fa-align-justify"></i>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="">
+                            <Link to='/login'>
                                 Log In <i className="fa-solid fa-right-to-bracket"></i>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="">
+                            <Link to='/register'>
                                 Register <i className="fa-solid fa-arrow-right-to-bracket"></i>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>

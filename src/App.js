@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer'
@@ -12,15 +12,11 @@ function App() {
     <div className="App">
       <Header className="App-header" />
 
-      <BrowserRouter>
         <Routes>
-          <Route index path="/" element={<LandingPage />} />
-          <Route path="/Catalogue" element={<Catalogue />} />
-          <Route path="/Contacts" element={<Contacts />} />
-          <Route render={() => Error} />
-          {/*         <Route render={() => ErrorPage()}/> */}
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/catalogue" element={<Catalogue />} />
+          <Route path="/contacts" element={<Contacts />} />
         </Routes>
-      </BrowserRouter>
 
       <Footer className="App-footer" />
     </div>
