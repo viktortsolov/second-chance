@@ -1,6 +1,12 @@
+import { useEffect } from 'react';
+import { getAll } from '../../../services/Books-Service';
 import './FilterMenu.css';
 
 function FilterMenu() {
+    useEffect( () => {
+        getAll();
+    });
+
     return (
         <aside className='FilterMenu'>
             <h2 className='FilterMenu-title'>Apply your criteria there.</h2>
@@ -9,8 +15,8 @@ function FilterMenu() {
                 <label htmlFor='author'>Author</label>
                 <input type='text' className='author' id='author' />
 
-                <label htmlFor='name'>Book name</label>
-                <input type='text' className='name' id='name' />
+                <label htmlFor='title'>Book title</label>
+                <input type='text' className='title' id='title' />
 
                 <label htmlFor='year'>Year of printing</label>
                 <input type='text' className='year' id='year' />
