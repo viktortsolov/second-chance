@@ -14,7 +14,9 @@ function Book({ book }) {
                         <p className="content__title">{book.title}</p>
                         <p className="content__author">{book.author}</p>
                         <p className="content__year">{book.year}</p>
+                        <p className="content__genre">{book.genre}</p>
                         <p className="content__pages">{book.pages}</p>
+                        <p className="content__make">{book.make}</p>
                         <p className="content__quality">{book.quality}</p>
                     </div>
                 </article>
