@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { getMine } from "../../services/Books-Service";
-import { getUser } from "../../services/User-Services";
+import { getUser } from "../../services/User-Service";
 
-import Profile from "./Profile";
+import Profile from "./Profile/Profile";
 import BookList from "../Books/BookList/BookList";
 
-import './MyOffers.css';
+import './MyBooks.css';
 
 function MyBooks() {
     let [user, setUser] = useState({});
