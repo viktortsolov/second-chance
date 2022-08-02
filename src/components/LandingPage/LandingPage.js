@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 function LandingPage() {
@@ -8,8 +9,12 @@ function LandingPage() {
                 <p className='content__more'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
                 <div className='content__buttons'>
-                    <button className='button'>SHOW MORE <i class="fa-solid fa-book-open"></i></button>
-                    <button className='button'>OUR LOCATION <i class="fa-solid fa-location-dot"></i></button>
+                    <Link to='/catalogue'>
+                        <button className='button'>MORE <i class="fa-solid fa-book-open"></i></button>
+                    </Link>
+                    <Link to='/contacts'>
+                        <button className='button'>LOCATION <i class="fa-solid fa-location-dot"></i></button>
+                    </Link>
                 </div>
             </div>
         </main>
