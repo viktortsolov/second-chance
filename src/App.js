@@ -6,6 +6,7 @@ import './App.css';
 import LandingPage from './components/LandingPage/LandingPage';
 import Catalogue from './components/Books/Catalogue/Catalogue'
 import Contacts from './components/Contacts/Contacts'
+import MyBooks from "./components/MyBooks/MyBooks";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/mybooks" element={<MyBooks />} />
           <Route path="/catalogue" element={<Catalogue />} />
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
