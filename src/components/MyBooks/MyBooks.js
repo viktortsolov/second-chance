@@ -13,9 +13,6 @@ function MyBooks() {
     let [books, setBooks] = useState([]);
 
     useEffect(() => {
-        getUser()
-            .then(data => console.log(data));
-
         getMine(96)
             .then(data => {
                 console.log(data);

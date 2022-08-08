@@ -2,15 +2,11 @@ import api from "./api";
 import { request } from "./requestService";
 
 export const getAuthors = () => {
-    return fetch(api.books)
-        .then(res => res.json())
+    return request(api.cars)
         .then(data => {
             let res = Object.values(data)
                 .map(d => d.author);
-
-            return [... new Set(res)];
         })
-        .catch(err => console.log(err));
 }
 
 export const getBooks = (make) => {

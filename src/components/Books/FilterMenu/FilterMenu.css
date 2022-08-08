@@ -27,7 +27,11 @@
     border-radius: 4px;
     background-color: #fff;
     padding: 5px;
-  }
+}
+
+.FilterMenu-form input {
+    border: none;
+}
 
 .FilterMenu-form-submitBtn {
     margin-top: 10px;

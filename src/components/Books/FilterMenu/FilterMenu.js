@@ -1,17 +1,47 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { getAll } from '../../../services/Books-Service';
+import { getAuthors, getBooks } from '../../../services/FilterMenu-Service';
+
 import './FilterMenu.css';
 
 function FilterMenu() {
-    useEffect( () => {
+    useEffect(() => {
         getAll();
     });
+
+    let [authors, setAuthors] = useState([]);
+    let [books, setBooks] = useState([]);
+
+    useEffect(() => {
+        getAuthors()
+            .then(authors => {
+                setAuthors(authors);
+            });
+
+        let authorSelected = document.getElementById("make").value;
+        getBooks(authorSelected)
+            .then(books => {
+                setBooks(books);
+            });
+    }, []);
+
+    function handleMakeChange(e) {
+        getBooks(e.target.value)
+            .then(books => {
+                setBooks(books);
+            });
+    }
+
+    function FilterMenuSubmit(e){
+        e.preventDefault();
+        console.log(e.target);
+    }
 
     return (
         <aside className='FilterMenu'>
             <h2 className='FilterMenu-title'>Apply your criteria there.</h2>
 
-            <form action='get' className='FilterMenu-form'>
+            <form action='get' className='FilterMenu-form' onSubmit={FilterMenuSubmit}>
                 <label htmlFor='author'>Author</label>
                 <input type='text' className='author' id='author' />
 

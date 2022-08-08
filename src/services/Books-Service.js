@@ -20,7 +20,7 @@ export const getMine = (userId) => {
         .catch(err => console.log(err));
 }
 
-export const createNewCar = async (
+export const createNewBook = async (
     {
         picture,
         title,

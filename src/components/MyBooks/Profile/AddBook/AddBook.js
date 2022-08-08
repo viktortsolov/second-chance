@@ -1,32 +1,19 @@
 import { useEffect, useState } from "react";
-import { getMine } from "../../../../services/Books-Service";
-import { getUser } from "../../../../services/User-Service";
+import { Link } from "react-router-dom";
+import { storage } from "../../../../utils/firebase";
 
+import { createNewBook } from "../../../../services/Books-Service";
+import { useInput } from "../../../../custom/useInput-Hook";
 
-import './AddBook.css';
+import "./AddBook.css";
 
 function AddBook() {
     let [user, setUser] = useState({});
-    let [books, setBooks] = useState([]);
+    let [image, setImage] = useState(null);
+    let [progress, setProgress] = useState(0);
+    let [url, setUrl] = useState("");
 
-    useEffect(() => {
-        getUser()
-            .then(data => console.log(data));
-
-        getMine(96)
-            .then(data => {
-                console.log(data);
-                return setBooks(data);
-            });
-    }, []);
-
-    return (
-        <main className="Main-AddBook">
-            <div className="AddBook">
-
-            </div>
-        </main>
-    );
+    const { value: title, bind: bindTitle, reset: resetTitle } = useInput('');
 }
 
 export default AddBook;
