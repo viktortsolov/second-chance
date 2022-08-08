@@ -10,10 +10,10 @@ function LandingPage() {
 
                 <div className='content__buttons'>
                     <Link to='/catalogue'>
-                        <button className='button'>MORE <i class="fa-solid fa-book-open"></i></button>
+                        <button className='button'>MORE <i className="fa-solid fa-book-open"></i></button>
                     </Link>
                     <Link to='/contacts'>
-                        <button className='button'>LOCATION <i class="fa-solid fa-location-dot"></i></button>
+                        <button className='button'>LOCATION <i className="fa-solid fa-location-dot"></i></button>
                     </Link>
                 </div>
             </div>
