@@ -11,8 +11,8 @@ function Catalogue() {
 
     useEffect(() => {
         getAll()
-            .then(res => {
-                return setBooks(res.slice(1));
+            .then(data => {
+                return setBooks((data[0] != null ? data : data.slice(1)));
             });
 
     }, []);

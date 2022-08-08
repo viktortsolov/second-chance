@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getMine } from "../../../services/Books-Services";
-import { getUser } from "../../../services/User-Services";
+import { getMine } from "../../../../services/Books-Service";
+import { getUser } from "../../../../services/User-Service";
 
 
 import './AddBook.css';
@@ -11,7 +11,7 @@ function AddBook() {
 
     useEffect(() => {
         getUser()
-            .then(data=> console.log(data));
+            .then(data => console.log(data));
 
         getMine(96)
             .then(data => {

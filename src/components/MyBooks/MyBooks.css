@@ -1,0 +1,14 @@
+.Main-MyBooks{
+    position: relative;
+    top: -26px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background: white;
+}
+
+.MyBooks{
+    margin: 0 auto;
+    max-width: 1290px;
+    display: flex;    
+    justify-content: space-between;
+} 

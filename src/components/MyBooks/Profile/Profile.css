@@ -1,0 +1,12 @@
+.Profile-wrapper {
+    width: 20%;
+    border: 2px solid #A89B8C;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.Profile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
