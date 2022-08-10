@@ -1,0 +1,163 @@
+.AddBook-wrapper {
+    position: relative;
+    top: -26px;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background: white;
+}
+
+.AddBook {
+    margin: 0 auto;
+    max-width: 1290px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+.AddBook-content {
+    display: flex;
+    flex-direction: column;
+    width: 43%;
+}
+
+.AddBook button {
+    border: none;
+    padding: 10px 20px;
+    background: rgb(23 154 23);
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.AddBook button:hover {
+    cursor: pointer;
+    color: gold;
+    background: rgba(168, 172, 117, 0.859);
+}
+
+.AddBook-imageUpload {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.AddBook-imageUpload-Image-wrapper {
+    margin-right: 160px;
+    margin-left: 50px;
+}
+
+.AddBook-imageUpload-Image {
+    width: 488px;
+    height: 350px;
+}
+
+.AddBook-imageUpload-progress {
+    font-size: x-large;
+}
+
+.AddBook-text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.AddBook-content-title {
+    color: rgb(23 154 23);
+}
+
+.AddBook-text label {
+    margin: 10px;
+    display: contents;
+
+}
+
+.AddBook-text strong {
+    background: rgb(23 154 23);
+    padding: 6px;
+    color: white;
+    width: 100%;
+    margin-right: 30px;
+    margin-top: 15px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.AddBook-text-input {
+    border: none;
+    padding: 5px;
+    width: 80%;
+    border-bottom-left-radius: 14px;
+    border-bottom: 3px solid rgb(23 154 23);
+}
+
+.AddBook-text-comment {
+    border-bottom: 3px solid rgb(23 154 23);
+    padding: 3px;
+    border-bottom-left-radius: 20px;
+}
+
+.AddBook-text-comment strong {}
+
+.AddBook-text-comment textarea {
+    border: 4px dashed rgb(23 154 23);
+    position: relative;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    width: 100%;
+    height: 160px;
+    margin-top: 10px;
+}
+
+.AddBook-button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.AddBook-Submit-Input {
+    align-self: flex-end;
+}
+
+.AddBook-Submit-Input {
+    border: none;
+    padding: 10px 20px;
+    background: rgb(23 154 23);
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.AddBook-Submit-Input:hover {
+    cursor: pointer;
+    color: gold;
+    background: rgba(168, 172, 117, 0.859);
+}
+
+.AddBook-Back-Btn {}
+
+.AddBook-Back-Btn:hover {}
+
+.AddBook-imageUpload-title {
+    color: rgb(23 154 23);
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+/* VALIDATIONS */
+
+.input-validation {
+    color: red;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* .commentTitle{
+    margin-top: 17px !important;
+} */

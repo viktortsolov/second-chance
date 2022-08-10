@@ -9,6 +9,7 @@ import Contacts from './components/Contacts/Contacts'
 import MyBooks from "./components/MyBooks/MyBooks";
 import Book from "./components/Books/BookList/Book/Book";
 import AddBook from "./components/MyBooks/Profile/AddBook/AddBook";
+import Ask from "./components/Ask/Ask";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/addbook" element={<AddBook />} />
           <Route path="/book/:id" element={<Book />} />
+          <Route path="/ask" element={<Ask />} />
         </Routes>
 
       <Footer className="App-footer" />

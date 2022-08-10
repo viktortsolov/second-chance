@@ -58,3 +58,51 @@ export const getOne = (id) => {
         })
         .catch(err => console.log(err));
 }
+
+export const sortByPriceAscending = () => {
+    return fetch(api.books)
+       .then(res => res.json())
+       .then(data => Object.values(data))
+       .then(res => res.sort(function (a, b) {
+          return a.price - b.price;
+       }))
+       .catch(err => console.log(err));
+ }
+ 
+ export const sortByPriceDescending = () => {
+    return fetch(api.books)
+       .then(res => res.json())
+       .then(data => Object.values(data))
+       .then(res => res.sort(function (a, b) {
+          return b.price - a.price;
+       }))
+       .catch(err => console.log(err));
+ }
+ 
+ export const sortByPriceAscendingForMyProfile = (userId) => {
+    return fetch(api.books)
+       .then(res => res.json())
+       .then(data => Object
+          .values(data))
+       .then(res => {
+          return res.filter(book => book.ownerId === userId);
+       })
+       .then(res => res.sort(function (a, b) {
+          return a.price - b.price;
+       }))
+ 
+       .catch(err => console.log(err));
+ }
+ 
+ export const sortByPriceDescendingForMyProfile = (userId) => {
+    return fetch(api.books)
+       .then(res => res.json())
+       .then(data => Object
+          .values(data))
+       .then(res => res.filter(book => book.ownerId === userId).sort(function (a, b) {
+          return b.price - a.price;
+       })
+ 
+       )
+       .catch(err => console.log(err));
+ }

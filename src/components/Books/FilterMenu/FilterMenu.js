@@ -18,7 +18,7 @@ function FilterMenu() {
                 setAuthors(authors);
             });
 
-        let authorSelected = document.getElementById("make").value;
+        let authorSelected = document.getElementById("author").value;
         getBooks(authorSelected)
             .then(books => {
                 setBooks(books);
