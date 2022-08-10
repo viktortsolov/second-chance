@@ -1,9 +1,5 @@
 .Main-MyBooks{
-    position: relative;
-    top: -26px;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    background: white;
+    height: 90vh;
 }
 
 .MyBooks{

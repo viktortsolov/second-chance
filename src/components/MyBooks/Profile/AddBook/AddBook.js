@@ -113,30 +113,29 @@ function AddBook() {
     return (
         <main className="AddBook-wrapper">
             <div className="AddBook">
-                <section className="AddBook-imageUpload-Image-wrapper">
-                    <h1 className="AddBook-imageUpload-title">Add new book</h1>
+                <section className="AddBook-uploadImg-img-wrapper">
+                    <h1 className="AddBook-uploadImg-title">ADD NEW BOOK</h1>
 
                     <img src={url || "http://via.placeholder.com/400"} alt="Please provide photo
-                    !" className="AddBook-imageUpload-Image" />
+                    !" className="AddBook-uploadImg-img" />
 
-                    <article className="AddBook-imageUpload">
+                    <article className="AddBook-uploadImg">
 
-                        <progress value={progress} max="100" className="AddBook-imageUpload-progress" />
+                        <progress value={progress} max="100" className="AddBook-uploadImg-progress" />
 
-                        <div className="AddBook-imageUpload-input-wrapper">
+                        <div className="AddBook-uploadImg-input-wrapper">
 
-                            <input id="photoUrl" className="AddBook-imageUpload-input" type="file" onChange={handleChangePhotoUpload} />
-                            <button onClick={uploadImage}>Upload
-                                !</button>
+                            <input id="photoUrl" className="AddBook-uploadImg-input" type="file" onChange={handleChangePhotoUpload} />
+                            <button onClick={uploadImage} className="submitBtn">Upload!</button>
                         </div>
 
                     </article>
                 </section>
+
                 <form className="AddBook-content" onSubmit={handleSubmit}>
 
                     <h2 className="AddBook-content-title">
-                        Please fill in all the fields
-                        !
+                        FILL ALL THE FIELDS
                     </h2>
 
                     <article className="AddBook-text">
