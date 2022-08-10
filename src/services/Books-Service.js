@@ -44,7 +44,7 @@ export const createNewBook = async (
 }
 
 async function setNewBookId(name) {
-    let res = await request(`${api.book + name + '.json'}`, 'PATCH', { id: name, returnSecureToken: true });
+    let res = await request(`${api.book + name + '.json'}`, 'PATCH', { id: name });
 
     return res;
 }

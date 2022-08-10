@@ -2,7 +2,7 @@ const baseUrl = 'https://second-chance-viktortsolov-default-rtdb.europe-west1.fi
 
 const exp = {
     books: `${baseUrl}books.json`,
-    book: `${baseUrl}book/`
+    book: `${baseUrl}books/`
 };
 
 export default exp;
