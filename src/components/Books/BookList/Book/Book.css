@@ -1,59 +1,48 @@
 .Book {
-    border: 2px solid #A89B8C;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    text-decoration: none;
+	height: 420px;
+	width: 800px;
+	margin: 0 auto;
+	border-radius: 7px 7px 7px 7px;
+	-webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
 }
 
-.Book a {
-    text-decoration: none;
-    color: black;
+.info__picBox {
+	float: left;
+	height: 420px;
+	width: 350px;
 }
 
-.Book-info {
-    border-radius: 10px;
-    display: flex;
-    background: rgba(168, 172, 117, 0.859);
+.info__picBox img {
+	border-radius: 7px 0 0 7px;
 }
 
-.Book-info:hover {
-    background: gold;
+.info__content {
+	float: left;
+	height: 420px;
+	width: 450px;
+	border-radius: 0 7px 10px 7px;
+	background-color: #ffffff;
 }
 
-.BookItem-Box-pic-wrapper {
-    width: 250px;
-    height: 200px;
+.info__text {
+	height: 300px;
+	width: 450px;
 }
 
-.BookItem-Box-pic {
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+.info__text #title {
+	margin: 0 0 0 38px;
+	padding-top: 52px;
+	font-size: 34px;
+	color: #474747;
+	font-weight: 600;
 }
 
-.BookItem-Box-content {
-    background: white;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-    margin: 5px 0px;
-    flex-basis: 100%;
-    height: 190px;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.BookItem-Box-content:hover {
-    background: rgba(168, 172, 117, 0.859);
-    color: white;
-}
-
-.BookItem-Box-content label {
-    font-size: 18px;
-    width: 50%;
-}
-
-.BookItem-Box-content label:hover {
-    cursor: pointer;
+.info__text #info {
+	margin-top: 20px;
+	line-height: 35px;
+	font-size: 20px;
+	color: #474747;
+	font-weight: lighter;
 }

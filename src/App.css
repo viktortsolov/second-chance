@@ -17,6 +17,7 @@
     align-self: center;
     font-size: 14px;
     transition: 0.5s;
+    text-decoration: none;
 }
 
 .submitBtn:hover {

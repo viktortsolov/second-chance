@@ -6,6 +6,7 @@
     padding: 20px;
     border-radius: 12px;
     margin-right: 20px;
+    margin-top: 30px;
 }
 
 .FilterMenu-form {
@@ -31,24 +32,4 @@
 
 .FilterMenu-form input {
     border: none;
-}
-
-.FilterMenu-form-submitBtn {
-    margin-top: 10px;
-    border: 2px solid #A89B8C;
-    background: #A89B8C;
-    border-radius: 25px;
-    width: fit-content;
-    padding: 5px 20px;
-    color: white;
-    font-weight: bold;
-    align-self: center;
-    font-size: 14px;
-    transition: 0.5s;
-}
-
-.FilterMenu-form-submitBtn:hover {
-    cursor: pointer;
-    color: #A89B8C;
-    background-color: transparent;
 }
