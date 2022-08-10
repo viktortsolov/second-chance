@@ -61,7 +61,7 @@ function FilterMenu() {
                     <option value='QUALITY'>QUALITY</option>
                 </select>
 
-                <input type='submit' className='FilterMenu-form-submitBtn' value='Filter' />
+                <input type='submit' className='submitBtn' value='Filter' />
             </form>
         </aside>
     )

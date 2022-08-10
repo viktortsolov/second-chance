@@ -6,21 +6,23 @@
 }
 
 .submitBtn {
-    border: none;
-    background: rgb(23 154 23);
-    border-radius: 12px;
+    margin-top: 10px;
+    border: 2px solid #A89B8C;
+    background: #A89B8C;
+    border-radius: 25px;
     width: fit-content;
     padding: 5px 20px;
     color: white;
     font-weight: bold;
     align-self: center;
-    font-size: 18px;
+    font-size: 14px;
+    transition: 0.5s;
 }
 
 .submitBtn:hover {
     cursor: pointer;
-    color: gold;
-    background: rgb(61 175 61);
+    color: #A89B8C;
+    background-color: transparent;
 }
 
 .checkBox {
@@ -35,19 +37,30 @@
 }
 
 .editBtn {
-    background: gold;
+    margin-top: 10px;
+    border: 2px solid #F8DE7E;
+    background: #F8DE7E;
+    border-radius: 25px;
+    width: fit-content;
+    padding: 5px 20px;
     color: white;
-    padding: 10px;
-    width: 49%;
-    font-size: 40px;
+    font-weight: bold;
+    align-self: center;
+    font-size: 14px;
+    transition: 0.5s;
 
 }
 
 .deleteBtn {
+    margin-top: 10px;
+    border: 2px solid red;
     background: red;
+    border-radius: 25px;
+    width: fit-content;
+    padding: 5px 20px;
     color: white;
-    padding: 10px;
-    width: 46%;
-    margin-right: 60px;
-    font-size: 40px;
+    font-weight: bold;
+    align-self: center;
+    font-size: 14px;
+    transition: 0.5s;
 }

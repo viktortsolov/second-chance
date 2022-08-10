@@ -1,6 +1,6 @@
 .Main-LandingPage {
     width: 100%;
-    height: 91vh;
+    height: 90vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../../assets/landingpage_background.png);
 }
 

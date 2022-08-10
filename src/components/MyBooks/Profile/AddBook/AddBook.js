@@ -226,8 +226,8 @@ function AddBook() {
                     </article>
 
                     <div className="AddBook-button-wrapper">
-                        <Link to="/MyBooks" className="AddBook-Back-Btn back-Btn">Cancel</Link>
-                        <input type="submit" className="AddBook-Submit-Input" value="Create" />
+                        <Link to="/MyBooks" className="editBtn">Cancel</Link>
+                        <input type="submit" className="submitBtn" value="Create" />
                     </div>
                 </form>
             </div>
