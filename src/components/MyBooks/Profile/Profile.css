@@ -1,4 +1,5 @@
 .Profile-wrapper {
+    margin-top: 20px;
     width: 20%;
     border: 2px solid #A89B8C;
     padding: 20px;
@@ -9,4 +10,22 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Profile-photo {
+    width: 200px;
+    height: 200px;margin-bottom: 10px;
+}
+
+.Profile label {
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.Profile label p {
+    font-weight: bold;
+    font-size: 18px;    
+    color: #A89B8C;
 }

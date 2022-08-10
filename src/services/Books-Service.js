@@ -49,7 +49,6 @@ async function setNewBookId(name) {
     return res;
 }
 
-
 export const getOne = (id) => {
     return fetch(api.books + id + '.json')
         .then(res => res.json())

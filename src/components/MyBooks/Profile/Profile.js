@@ -5,10 +5,7 @@ function Profile(profile) {
     return (
         <aside className="Profile-wrapper">
             <div className="Profile">
-                <label htmlFor="photo">
-                    Photo:
-                    <p>{profile.photo}</p>
-                </label>
+                <img className="Profile-photo" src={profile.url} alt="User photo"></img>
                 <label htmlFor="name">
                     Name:
                     <p>{profile.name}</p>
@@ -19,8 +16,8 @@ function Profile(profile) {
                 </label>
             </div>
 
-            <Link to="./addbook">
-                <button>Add a book</button>
+            <Link to="/addbook" className='submitBtn'>
+                Add a book
             </Link>
         </aside>
     );

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { getMine } from "../../services/Books-Service";
+import { getMine, sortByPriceDescendingForMyProfile, sortByPriceAscendingForMyProfile } from "../../services/Books-Service";
 import { getUser } from "../../services/User-Service";
 
 import Profile from "./Profile/Profile";
@@ -12,6 +12,10 @@ function MyBooks() {
     let [user, setUser] = useState({});
     let [books, setBooks] = useState([]);
 
+    let [greenAsc, setGreenAsc] = useState(true);
+    let [greenDesc, setGreenDesc] = useState(true);
+
+
     useEffect(() => {
         getMine(96)
             .then(data => {
@@ -20,11 +24,36 @@ function MyBooks() {
             });
     }, []);
 
+    function sortByPriceAsc() {
+        setGreenAsc(!greenAsc);
+
+        sortByPriceAscendingForMyProfile(96)
+            .then(res => {
+                setBooks(res);
+            });
+    }
+
+    function sortByPriceDesc() {
+        setGreenDesc(!greenDesc);
+
+        sortByPriceDescendingForMyProfile(96)
+            .then(res => {
+                setBooks(res);
+            });
+    }
+
+
     return (
         <main className="Main-MyBooks">
             <div className="MyBooks">
                 <Profile />
-                <BookList books={books} className="Book-BookList" />
+
+                <BookList books={books}
+                    greenAsc={greenAsc}
+                    greenDesc={greenDesc}
+                    sortByPriceDesc={sortByPriceDesc}
+                    sortByPriceAsc={sortByPriceAsc}
+                    className="Book-BookList" />
             </div>
         </main>
     );
