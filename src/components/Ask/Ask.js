@@ -21,12 +21,12 @@ class Ask extends Component {
                 <div className='Ask-wrapper'>
                     <h1 className='title'>ASK US</h1>
                     <div className='login'>
-                        <input type='text' placeholder='Your Name' />
-                        <input type='text' placeholder='Your Email Address' />
+                        <input type='text' className="input" placeholder='Your Name' />
+                        <input type='text' className="input" placeholder='Your Email Address' />
                     </div>
 
                     <div className='subject'>
-                        <input type='text' placeholder='Subjct' />
+                        <input type='text' className="input" placeholder='Subjct' />
                     </div>
 
                     <div className='msg'>

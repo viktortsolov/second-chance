@@ -5,7 +5,7 @@ function Book({ book }) {
     return (
         <li className="Book">
             <div className="info__picBox">
-                <img src={book.picture} alt="No Photo available" className="pic" />
+                <img src=/*{book.picture}*/"https://upload.wikimedia.org/wikipedia/en/5/57/DeadZone.jpg" alt="No Photo available" className="pic" />
             </div>
             <div className="info__content">
                 <div className="info__text">

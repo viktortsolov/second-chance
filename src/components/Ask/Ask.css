@@ -1,0 +1,46 @@
+.Ask-wrapper {
+    border-radius: 5px;
+    width: 1200px;
+    height: 600px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../../assets/landingpage_background.png);
+    margin: 50px auto;
+    box-sizing: border-box;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(23, 31, 27, 0.6);
+}
+
+.Ask-wrapper .title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #e9eaea;
+    letter-spacing: 1px;
+}
+
+.input,
+.msg .area {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border: 2px solid #e9eaea;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.login .input {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+}
+
+.login .input:last-child {
+    margin-right: 0;
+}
+
+.msg .area {
+    height: 200px;
+}
