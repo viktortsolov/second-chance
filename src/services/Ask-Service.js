@@ -4,10 +4,11 @@ import { request } from "./requestService";
 export const createNewQuestion = async (   
       nameQuestion,
       email,
+      subject,
       question,
    ) => {
 
-   let res = await request(`${api.questions}`, 'POST', { nameQuestion, email, question });
+   let res = await request(`${api.questions}`, 'POST', { nameQuestion, subject, email, question });
 
    let questionId = res.name;
    res = await setNewQuestionId(questionId);

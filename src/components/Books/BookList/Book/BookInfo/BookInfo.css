@@ -1,0 +1,96 @@
+.Main-BookInfo {
+  min-height: 90vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../../../../../assets/bookinfo_background.jpg);
+}
+
+.BookInfo {
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 55%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 7px 7px 7px 7px;
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 14px 32px 0px rgba(255, 255, 255, 0.4);
+  padding: 40px;
+}
+
+.BookInfo-details {
+  display: flex;
+}
+
+.BookInfo-details-imageWrapper {
+  height: 600px;
+  width: 530px;
+  margin: 15px;
+}
+
+.BookInfo-details-imageWrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.BookInfo-details-content-wrapper {
+  flex-basis: 50%;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.BookInfo-details-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.BookInfo-details-content-label {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+}
+
+.BookInfo-details-content-text {
+  padding: 10px;
+  max-width: 70%;
+  box-sizing: border-box;
+  border: 2px solid #e9eaea;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+.BookInfo-textArea {
+  height: 105px;
+}
+
+.contactOwner {
+  padding: 40px;
+  border: 3px solid #A89B8C;
+  width: 92%;
+  border-radius: 10px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.25s;
+  box-shadow: 1px 1px 2px #000;
+  background: linear-gradient(-45deg, #fff 0%, #fff 33.33%, rgba(128, 128, 128, .5), 33.33%, rgba(128, 128, 128, 0.4), 66.66%, #fff 66.66%);
+}
+
+.contactOwner-title {
+  color: #A89B8C;
+  font-weight: bolder;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.contactOwner-text {
+  color: #A89B8C;
+  font-size: 28px;
+}

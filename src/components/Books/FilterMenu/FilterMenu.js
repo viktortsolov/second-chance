@@ -4,7 +4,7 @@ import { getAuthors, getBooks } from '../../../services/FilterMenu-Service';
 
 import './FilterMenu.css';
 
-function FilterMenu() {
+function FilterMenu({onMenuSearchSubmit}) {
     useEffect(() => {
         getAll();
     });
@@ -25,23 +25,11 @@ function FilterMenu() {
             });
     }, []);
 
-    function handleMakeChange(e) {
-        getBooks(e.target.value)
-            .then(books => {
-                setBooks(books);
-            });
-    }
-
-    function FilterMenuSubmit(e){
-        e.preventDefault();
-        console.log(e.target);
-    }
-
     return (
         <aside className='FilterMenu'>
             <h2 className='FilterMenu-title'>Apply your criteria there.</h2>
 
-            <form action='get' className='FilterMenu-form' onSubmit={FilterMenuSubmit}>
+            <form action='get' className='FilterMenu-form' onSubmit={onMenuSearchSubmit}>
                 <label htmlFor='author'>Author</label>
                 <input type='text' className='author' id='author' />
 

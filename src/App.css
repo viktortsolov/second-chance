@@ -38,30 +38,85 @@
 }
 
 .editBtn {
-    margin-top: 10px;
     border: 2px solid #F8DE7E;
     background: #F8DE7E;
     border-radius: 25px;
     width: fit-content;
     padding: 5px 20px;
-    color: white;
+    color: #d4b483;
     font-weight: bold;
     align-self: center;
-    font-size: 14px;
+    font-size: 1.8em;
     transition: 0.5s;
-
+    text-decoration: none;
+    float: right;
+    width: 40%;
+    margin: 0 15px;
 }
 
 .deleteBtn {
-    margin-top: 10px;
     border: 2px solid red;
     background: red;
     border-radius: 25px;
     width: fit-content;
     padding: 5px 20px;
-    color: white;
+    color: #fff;
     font-weight: bold;
     align-self: center;
-    font-size: 14px;
+    font-size: 1.8em;
     transition: 0.5s;
+    text-decoration: none;
+    width: 30%;
+    float: left;
+    margin: 0 15px;
+}
+
+.logInFirst {
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./assets/landingpage_background.png);
+}
+
+.logInFirst-title {
+    padding: 30vh;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+.logInFirst-title a {
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #fff;
+    color: #A89B8C;
+}
+
+.Books-Loading {
+    text-align: center;
+    font-size: 17px;
+}
+
+.spinner {
+    width: 10em;
+    height: 10em;
+    border-top: 1em solid #A89B8C;
+    border-right: 1em solid transparent;
+    border-radius: 50%;
+    margin: auto;
+    animation: spinner 1s linear infinite;
+}
+
+.head {
+    width: 1em;
+    height: 1em;
+    background-color: #A89B8C;
+    border-radius: 50%;
+    margin-left: 8.5em;
+    margin-top: 0.5em;
+}
+
+@keyframes spinner {
+    100% {
+        transform: rotate(360deg)
+    }
 }

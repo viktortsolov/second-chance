@@ -9,10 +9,10 @@ function LandingPage() {
                 <p className='content__more'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
                 <div className='content__buttons'>
-                    <Link to='/catalogue'>
+                    <Link to='/Catalogue'>
                         <button className='button'>MORE <i className="fa-solid fa-book-open"></i></button>
                     </Link>
-                    <Link to='/contacts'>
+                    <Link to='/Contacts'>
                         <button className='button'>LOCATION <i className="fa-solid fa-location-dot"></i></button>
                     </Link>
                 </div>

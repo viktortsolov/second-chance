@@ -1,8 +1,8 @@
 .Ask-wrapper {
     border-radius: 5px;
-    width: 1200px;
+    max-width: 1200px;
     height: 600px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../../assets/landingpage_background.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../assets/askus_background.jpg);
     margin: 50px auto;
     box-sizing: border-box;
     padding: 40px;

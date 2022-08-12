@@ -1,32 +1,17 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense } from 'react';
 
 import FilterMenu from '../FilterMenu/FilterMenu';
 
-import { getAll, sortByPriceAscending, sortByPriceDescending } from '../../../services/Books-Service';
-import { getFilteredBooks } from  '../../../services/FilterMenu-Service'
+import { getFilteredBooks } from '../../../services/FilterMenu-Service'
+import { useFetch } from "../../../custom/useFetch-Hook";
 
+import api from '../../../services/api';
 import './Catalogue.css';
 
 function Catalogue() {
     const BookListLazyComponent = React.lazy(() => import('../BookList/BookList'));
-    let [model, setModel] = useState("");
-    let [books, setBooks] = useState([]);
 
-    let [greenAsc, setGreenAsc] = useState(false);
-    let [greenDesc, setGreenDesc] = useState(false);
-
-    useEffect(() => {
-        let mounted = true;
-        getAll()
-            .then(data => {
-                if (mounted) {
-                    setBooks((data[0] != null ? data : data.slice(1)));
-                    mounted = false;
-                }
-            });
-
-    }, []);
-
+    let [books, setBooks, areBooksLoading] = useFetch(api.books, []);
 
     function FilterSearchSubmit(e) {
         e.preventDefault();
@@ -39,7 +24,6 @@ function Catalogue() {
         let qualityFind = e.target.quality.value;
 
         getFilteredBooks(authorFind,
-            model,
             priceBellowFind,
             priceAboveFind,
             titleFind,
@@ -50,43 +34,19 @@ function Catalogue() {
                 setBooks(res);
             });
     }
-
-    function sortByPriceAsc(e) {
-        setGreenAsc(true);
-        setGreenDesc(false);
-
-        sortByPriceAscending()
-            .then(res => {
-                setBooks(res);
-            });
-
-    }
-
-    function sortByPriceDesc(e) {
-        setGreenAsc(false);
-        setGreenDesc(true);
-
-        sortByPriceDescending()
-            .then(res => {
-                setBooks(res);
-            });
-
-    }
-
     return (
         <main className="Main-Catalogue">
             <div className="Catalogue">
-                <FilterMenu className="Catalogue-FilterMenu" onMenuSubmit={FilterSearchSubmit} setModel={setModel} />
+                <FilterMenu className="Catalogue-FilterMenu" onMenuSearchSubmit={FilterSearchSubmit} />
 
-                <Suspense fallback={<div className="Catalogue-BookList-suspense-fallback"><h1>Loading ...</h1></div>}>
-                    <BookListLazyComponent 
-                    books={books}
-                    setBooks={setBooks}
-                    greenAsc={greenAsc}
-                    greenDesc={greenDesc}
-                    sortByPriceDesc={sortByPriceDesc}
-                    sortByPriceAsc={sortByPriceAsc}
-                    className="Catalogue-BookList" />
+                <Suspense fallback={<div className="Catalogue-BookList-suspense-fallback"><h1>Loading ...</h1></div>} >
+                    {areBooksLoading ?
+                        <div className="Books-Loading spinner">
+                            <div className="head"></div>
+                        </div>
+                        :
+                        <BookListLazyComponent books={books} className="Catalogue-BookList" />
+                    }
                 </Suspense>
             </div>
         </main>

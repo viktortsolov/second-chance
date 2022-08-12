@@ -17,7 +17,7 @@ export const getBooks = (make) => {
                 .filter(d => d.make === make)
                 .map(d => d.title);
         })
-        .catch(err => console.log(err));
+        .catch(err => {let error = err});
 } 
 
 export const getFilteredBooks = async (
@@ -47,8 +47,4 @@ export const getFilteredBooks = async (
         .filter(x => transmission !== "All" ? x.transmission === transmission : x)
         .filter(x => fuel !== "All" ? x.fuel.toLowerCase() === fuel.toLowerCase() : x)
         .filter(x => color !== "All" ? x.color.toLowerCase() === color.toLowerCase() : x)
-
-    // && x.transmission === transmission
-    // && x.fuel.toLowerCase() === fuel.toLowerCase()
-    // && x.color.toLowerCase() === color.toLowerCase());        
-} 
+}

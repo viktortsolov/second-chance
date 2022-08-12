@@ -1,10 +1,10 @@
-.Main-MyBooks{
-    height: 90vh;
+.Main-MyBooks {
+    min-height: 90vh;
 }
 
-.MyBooks{
+.MyBooks {
     margin: 0 auto;
     max-width: 1290px;
-    display: flex;    
+    display: flex;
     justify-content: space-between;
-} 
+}

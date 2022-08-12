@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 import { createNewQuestion } from '../../services/Ask-Service';
-import notificationContext from "../../contexts/notificationContext";
-
-import Checkbox from '../../shared/checkBox';
-import { InputError } from '../../shared/inputError';
 
 import './Ask.css';
 
@@ -16,22 +12,16 @@ class Ask extends Component {
 
         this.emailInput = React.createRef();
         this.nameInput = React.createRef();
+        this.subjectInput = React.createRef();
         this.textInput = React.createRef();
 
         this.state = {
             checked: false,
             emailShow: '',
             nameShow: '',
+            subjectShow: '',
             textShow: '',
         };
-    }
-
-    componentDidMount() {
-        //this.context[1]({type: 'SUCCESS', payload: 'Yess'});
-    }
-
-    goBack() {
-        this.props.history.goBack();
     }
 
     handleCheckboxChange = event =>
@@ -42,43 +32,37 @@ class Ask extends Component {
 
         let name = e.target.name.value;
         let email = e.target.email.value;
+        let subject = e.target.subject.value;
         let text = e.target.text.value;
-        let checked = this.state.checked;
 
         if (email === '') {
             this.emailInput.current.focus();
             this.setState(oldState => ({ ...oldState, emailShow: 'Please fill your email!' }));
-            this.context[1]({ type: 'ERROR', payload: 'Please fill your email!' });
             return;
         }
 
         if (name === '') {
             this.nameInput.current.focus();
             this.setState(oldState => ({ ...oldState, emailShow: '', nameShow: 'Please fill your name!' }));
+            return;
+        }
 
-            this.context[1]({ type: 'ERROR', payload: 'Please fill your name!' });
+        if (subject === '') {
+            this.subjectInput.current.focus();
+            this.setState(oldState => ({ ...oldState, emailShow: '', nameShow: 'Please fill your subject!' }));
             return;
         }
 
         if (text === '') {
             this.textInput.current.focus();
             this.setState(oldState => ({ ...oldState, emailShow: '', nameShow: '', textShow: 'Please ask your question!' }));
-            this.context[1]({ type: 'ERROR', payload: 'Please fill your question!' });
             return;
         }
 
-        if (!checked) {
-            this.context[1]({ type: 'ERROR', payload: 'Please accept the Terms and Conditions!' });
-            return console.log('Please accept the Terms and Conditions!');
-        }
-
-        createNewQuestion(name, email, text)
+        createNewQuestion(name, email, subject, text)
             .then(res => {
-                this.context[1]({ type: 'SUCCESS', payload: 'Your question has been submited!' });
-                this.props.history.push('/Catalogue');
+                alert("Question is successfully submitted!")
             });
-
-
     }
 
     render() {
@@ -86,20 +70,22 @@ class Ask extends Component {
             <div className='Ask-Main'>
                 <div className='Ask-wrapper'>
                     <h1 className='title'>ASK US</h1>
-                    <div className='login'>
-                        <input type='text' className="input" placeholder='Your Name' />
-                        <input type='text' className="input" placeholder='Your Email Address' />
-                    </div>
+                    <form onSubmit={(e) => this.onAskFormSubmitHandler(e)}>
+                        <div className='login'>
+                            <input type="name" name="name" ref={this.nameInput} className="input" placeholder='Your Name' />
+                            <input type='email' name="email" ref={this.emailInput} className="input" placeholder='Your Email Address' />
+                        </div>
 
-                    <div className='subject'>
-                        <input type='text' className="input" placeholder='Subjct' />
-                    </div>
+                        <div className='subject'>
+                            <input type='text' name="subject" ref={this.subjectInput} className="input" placeholder='Subject' />
+                        </div>
 
-                    <div className='msg'>
-                        <textarea className='area' placeholder='Leave a Message'></textarea>
-                    </div>
+                        <div className='msg'>
+                            <textarea className='area' type="text" name="text" ref={this.textInput} placeholder='Leave a Message'></textarea>
+                        </div>
 
-                    <a className='submitBtn'>Send Message</a>
+                        <input type="submit" className='submitBtn' value="Send Message" />
+                    </form>
                 </div>
             </div>
         )

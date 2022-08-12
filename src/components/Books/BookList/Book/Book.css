@@ -1,5 +1,5 @@
 .Book {
-	height: 420px;
+	height: 500px;
 	width: 800px;
 	margin: 0 auto;
 	border-radius: 7px 7px 7px 7px;
@@ -10,12 +10,12 @@
 
 .info__picBox {
 	float: left;
-	height: 420px;
+	height: 500px;
 	width: 350px;
 }
 
 .info__picBox img {
-	height: 420px;
+	height: 500px;
 	border-radius: 7px 0 0 7px;
 }
 

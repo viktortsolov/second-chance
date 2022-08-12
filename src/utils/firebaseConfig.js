@@ -1,3 +1,7 @@
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
 var firebaseConfig = {
   apiKey: "AIzaSyDgBBIqOcmD13Mb606HFQ2FAu3FWGLNdmc",
   authDomain: "second-chance-viktortsolov.firebaseapp.com",
