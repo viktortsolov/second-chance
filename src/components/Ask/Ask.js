@@ -22,6 +22,7 @@ class Ask extends Component {
             subjectShow: '',
             textShow: '',
         };
+        
     }
 
     handleCheckboxChange = event =>
@@ -64,6 +65,8 @@ class Ask extends Component {
                 alert("Question is successfully submitted!")
             });
     }
+
+    goBack() {}
 
     render() {
         return (

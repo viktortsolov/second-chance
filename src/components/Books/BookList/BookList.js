@@ -1,4 +1,5 @@
-import { Component } from 'react';
+import { Component, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import Book from './Book/Book';
 
@@ -16,6 +17,10 @@ class BookList extends Component {
         } else {
             this.loader = true;
         }
+    }
+
+    goBack() {
+        
     }
 
     render() {
