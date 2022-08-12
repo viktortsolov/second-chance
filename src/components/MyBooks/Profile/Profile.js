@@ -8,7 +8,7 @@ function Profile({ profile }) {
     let [name, setName] = useState("");
 
     useEffect(() => {
-        getPhones(profile.uid)
+        getPhones()
             .then(x => {
                 let entries = Object.entries(x);
                 entries.forEach(entry => {
@@ -28,7 +28,7 @@ function Profile({ profile }) {
                 <img className="Profile-photo" src={profile.url || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"} alt="User photo"></img>
                 <h1>{name}</h1>
                 <p className="Profile-email">{profile.email}</p>
-                <p><strong>Phone Number: </strong>{phone}</p>
+                <p><strong>Phone: </strong>{phone}</p>
             </div>
 
             <Link to="/AddBook" className='submitBtn'>

@@ -7,13 +7,11 @@ export const ConfirmBox = ({
     setTask,
     task
 }) => {
-
-
     return (
         <>
             <div className="container-ConfirmBox">
                 <div className="confirmation-text">
-                    Do you really want to {taskName} this task?
+                    Do you really want to {taskName} this book?
             </div>
                 <div className="button-container-ConfirmBox">
                     <button

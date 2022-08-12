@@ -16,4 +16,3 @@ export const getPhones = async () => {
 
     return res;
 }
-

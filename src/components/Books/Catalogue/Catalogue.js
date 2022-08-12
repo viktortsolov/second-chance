@@ -15,20 +15,21 @@ function Catalogue() {
 
     function FilterSearchSubmit(e) {
         e.preventDefault();
-        let authorFind = e.target.author.value;
-        let priceBellowFind = e.target.priceBellow.value;
-        let priceAboveFind = e.target.priceAbove.value;
         let titleFind = e.target.title.value;
+        let authorFind = e.target.author.value;
+        let genreFind = e.target.genre.value;
         let yearFind = e.target.year.value;
         let pagesFind = e.target.pages.value;
+        let makeFind = e.target.make.value;
         let qualityFind = e.target.quality.value;
 
-        getFilteredBooks(authorFind,
-            priceBellowFind,
-            priceAboveFind,
+        getFilteredBooks(
             titleFind,
+            authorFind,
+            genreFind,
             yearFind,
             pagesFind,
+            makeFind,
             qualityFind)
             .then(res => {
                 setBooks(res);

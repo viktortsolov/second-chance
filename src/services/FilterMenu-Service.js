@@ -9,42 +9,48 @@ export const getAuthors = () => {
         })
 }
 
-export const getBooks = (make) => {
+export const getBooks = (author) => {
     return fetch(api.books)
         .then(res => res.json())
         .then(data => {
             return Object.values(data)
-                .filter(d => d.make === make)
+                .filter(d => d.author === author)
                 .map(d => d.title);
         })
-        .catch(err => {let error = err});
-} 
+        .catch(err => { let error = err });
+}
 
 export const getFilteredBooks = async (
+    titleFind,
+    authorFind,
+    genreFind,
+    yearFind,
+    pagesFind,
     makeFind,
-    modelFind,
-    priceBellow = 100000000,
-    priceAbove = 0,
-    firstRegistration = 1900,
-    transmission = "automatic",
-    fuel,
-    color = "black"
+    qualityFind
 ) => {
     let res = await request(api.books, 'GET');
 
-    firstRegistration = firstRegistration === "" ? 1000 : firstRegistration;
-
-    if (modelFind == "") {
-        modelFind = "All";
+    if (
+        titleFind == "" &&
+        authorFind == "" &&
+        genreFind == "" &&
+        yearFind == "" &&
+        pagesFind == "" &&
+        makeFind == "" &&
+        qualityFind == "") {
+        return Object.keys(res)
+        .map(key => ({ key, ...res[key] }));
     }
+
     return Object.keys(res)
         .map(key => ({ key, ...res[key] }))
-        .filter(x => makeFind !== "All" ? x.make === makeFind : x)
-        .filter(x => modelFind !== "All" ? x.model === modelFind : x)
-        .filter(x => priceAbove !== "" ? x.price >= priceAbove : x)
-        .filter(x => priceBellow !== "" ? x.price <= priceBellow : x)
-        .filter(x => firstRegistration !== "" ? x.year >= firstRegistration : x)
-        .filter(x => transmission !== "All" ? x.transmission === transmission : x)
-        .filter(x => fuel !== "All" ? x.fuel.toLowerCase() === fuel.toLowerCase() : x)
-        .filter(x => color !== "All" ? x.color.toLowerCase() === color.toLowerCase() : x)
+        .filter(x =>
+            x.title == titleFind ||
+            x.author == authorFind ||
+            x.genre == genreFind ||
+            x.year == yearFind ||
+            x.pages == pagesFind ||
+            x.make == makeFind ||
+            x.quality == qualityFind)
 }

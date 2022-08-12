@@ -1,7 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from 'react';
 import { getOne } from '../../../../../services/Books-Service';
-import { getOwnerPhone } from '../../../../../services/User-Service';
 
 import { deleteBook, editBook } from "../../../../../services/Books-Service";
 import { InputError, onInputBlur } from "../../../../../shared/inputError";
@@ -10,17 +9,19 @@ import { ConfirmBox, handleConfirmationBox } from "../../../../../shared/confirm
 import userContext from "../../../../../contexts/userContext";
 
 import './BookInfo.css';
+import { getPhones } from "../../../../../services/Phones-Service";
 
 function BookInfo({ match }) {
     const { id } = useParams();
     let [user, setUser] = useContext(userContext);
-
     let [book, setBook] = useState({});
     let [phone, setPhone] = useState('');
     let [overlayDisplay, setOverlayDisplay] = useState('none');
     let [bookInfo, setBookInfo] = useState('Main-BookInfo');
+
     const [editTask, setEditTask] = useState(false);
     const [deleteTask, setDeleteTask] = useState(false);
+
     let [errorMessage, setErrorMessage] = useState({
         Author: '',
         Title: '',
@@ -39,12 +40,19 @@ function BookInfo({ match }) {
         getOne(id)
             .then(data => {
                 setBook(data);
-                getOwnerPhone(data.ownerId)
-                    .then(ph => {
-                        setPhone(ph);
-                    });
+                getPhones()
+                    .then(x => {
+                        let entries = Object.entries(x);
+                        entries.forEach(entry => {
+                            entry.forEach(number => {
+                                if (number.uid === book.ownerId) { 
+                                    setPhone(number.phone)
+                                }
+                            })
+                        })
+                    })
             });
-    }, []);
+    }, [book.id]);
 
 
     const handleEditTask = (e) => {
