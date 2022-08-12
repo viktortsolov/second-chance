@@ -14,6 +14,7 @@ import LandingPage from './components/LandingPage/LandingPage';
 import Login from "./components/Authentication/Login/Login";
 import Logout from './components/Authentication/Logout/Logout';
 import MyBooks from "./components/MyBooks/MyBooks";
+import NoMatch from "./components/NoMatch/NoMatch";
 import Register from "./components/Authentication/Register/Register";
 
 import userContext from "./contexts/userContext";
@@ -38,6 +39,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/Logout" element={<Logout />} />
+          <Route path="*" element={<NoMatch/>}/>
           <Route render={() => ErrorPage()} />
         </Routes>
 
