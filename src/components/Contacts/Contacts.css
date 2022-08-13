@@ -56,3 +56,7 @@
     display: flex;
     margin-bottom: 5px
 }
+
+.info__title {
+    text-align: center;
+}
